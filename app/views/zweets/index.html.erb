@@ -1,0 +1,11 @@
+<h1>Zweets</h1>
+    <div>
+        <% for zweet in @zweets %>
+            <%= link_to zweet.status, zweet %></td>
+            <%= link_to zweet.zombie.name zweet.zombie %></td>
+            <%= link_to "Edit", edit_zweet_path(zweet) %></td>
+            <%= link_to "Destroy", zweet, method: :delete %></td>
+        <% end %>
+        <% if @zweets.size == 0 %>
+        <em> No Zweets Found</em>
+        <% end %>
